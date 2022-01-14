@@ -1,12 +1,9 @@
 package main
 
-import (
-	"fmt"
-	//"conf/mysql"
-)
+import "golangSample/mysql"
 
-func main()  {
-	fmt.Printf("hello")
-
-
+func main() {
+	mysql.InitDB()
+	mysql.QueryAll()
+	mysql.DB.Close()
 }
