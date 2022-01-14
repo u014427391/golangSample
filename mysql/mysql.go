@@ -47,7 +47,7 @@ func InitDB() {
 
 func QueryAll() {
 	var user User
-	rows, err := DB.Query("select * from user limit 1")
+	rows, err := DB.Query("select * from user")
 	if err != nil {
 		fmt.Println("query failed.")
 	}
