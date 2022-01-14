@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	//"conf/mysql"
+)
 
 func main()  {
 	fmt.Printf("hello")
+
+
 }
