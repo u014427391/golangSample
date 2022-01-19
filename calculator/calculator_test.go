@@ -1,21 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"testing"
+)
 
-func main() {
-	res := addUpper(10)
-	fmt.Printf("返回值res:%v", res)
-}
 
-func add(n1 int , n2 int) int {
-	return n1 + n2
-}
-
-func addUpper(n int) int {
-	res := 0
-	for i := 0 ; i <= n ; i++ {
-		res += i
+func TestAdd(t *testing.T)  {
+	res := add(1,2)
+	if res != 3 {
+		t.Fatalf("error res %v" , res)
 	}
-	return res
+	t.Logf("success res %v" , res)
+}
+
+func TestAddUpper(t *testing.T)  {
+	res := addUpper(10)
+	if res != 55 {
+		t.Fatalf("error res %v" , res)
+	}
+	t.Logf("success res %v" , res)
 }
 
