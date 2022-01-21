@@ -90,6 +90,10 @@ func main() {
 	fmt.Printf("c7:%v\n" , c7)
 	fmt.Printf("c8:%v\n" , c8)
 	fmt.Printf("c9:%v\n" , c9)
+
+	var i int = 10
+	fmt.Printf("i数据类型:%T \n" , i)
+
 }
 
 func GetUserInfo() (userName string , password string) {
