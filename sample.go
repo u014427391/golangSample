@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"golangSample/mysql"
+	"unsafe"
 )
 
 
@@ -93,6 +94,14 @@ func main() {
 
 	var i int = 10
 	fmt.Printf("i数据类型:%T \n" , i)
+
+	var r rune = 1
+	fmt.Printf("r类型%T \n" , r)
+	var b byte = 1
+	fmt.Printf("b类型%T \n" , b)
+
+	var n int16
+	fmt.Printf("n变量占用的字节数:%d \n" , unsafe.Sizeof(n))
 
 }
 
