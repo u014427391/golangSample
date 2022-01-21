@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"golangSample/mysql"
+	"math"
 	"unsafe"
 )
 
@@ -102,6 +103,22 @@ func main() {
 
 	var n int16
 	fmt.Printf("n变量占用的字节数:%d \n" , unsafe.Sizeof(n))
+
+	//var intV1 int16
+	//intV2 := 10
+	//intV1 = intV2
+	//fmt.Println(intV1)
+
+	var fNum1 float32 = -123.0000990
+	var fNum2 float64 = -123.0000990
+	fmt.Println("fNum1=" , fNum1 , "fNum2=" , fNum2)
+
+	// 最小误差值
+	p := 0.000001
+	// 判断两个浮点数误差是否在误差值之间
+	if math.Dim(float64(fNum1), fNum2) < p {
+		fmt.Println("fNum1 和 fNum2 相等")
+	}
 
 }
 
