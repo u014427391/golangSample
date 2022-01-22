@@ -120,6 +120,13 @@ func main() {
 		fmt.Println("fNum1 和 fNum2 相等")
 	}
 
+	var c byte = 'a'
+	fmt.Println("c=" , c)
+	fmt.Printf("c=%c \n" , c)
+
+	//var ct byte = '，'
+	//fmt.Println("ct=" , ct)
+
 }
 
 func GetUserInfo() (userName string , password string) {
