@@ -127,6 +127,13 @@ func main() {
 	//var ct byte = '，'
 	//fmt.Println("ct=" , ct)
 
+	var bol bool = true
+	fmt.Println("bol=" , bol)
+	fmt.Println("size of bool=" , unsafe.Sizeof(bol))
+
+
+
+
 }
 
 func GetUserInfo() (userName string , password string) {
