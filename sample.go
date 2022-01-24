@@ -120,6 +120,7 @@ func main() {
 		fmt.Println("fNum1 和 fNum2 相等")
 	}
 
+	// 字符 byte
 	var c byte = 'a'
 	fmt.Println("c=" , c)
 	fmt.Printf("c=%c \n" , c)
@@ -131,6 +132,46 @@ func main() {
 	fmt.Println("bol=" , bol)
 	fmt.Println("size of bool=" , unsafe.Sizeof(bol))
 
+
+	var str string = "golang"
+	//cannot assign to str[0]
+	// str[0] = 's'
+	fmt.Printf("%s length is %d \n" , str , len(str))
+	// 反引号
+	res := `programming language :
+		Java
+		Golang
+		Python
+		PHP
+		...
+		`
+	res1 := "programming language :\n" +
+		"Java\n" +
+		"Golang\n" +
+		"Python\n" +
+		"PHP\n" +
+		"...\n"
+	fmt.Printf("%s" , res)
+	fmt.Printf("%s" , res1)
+	// 字符串拼接
+	str = str + ",learning(学习)"
+	fmt.Printf("%s\n" , str)
+	// [0:6) 左闭右开区间
+	str1 := str[:6]
+	// [7:len(str)]
+	str2 := str[7:]
+	// 注意，这里也是[0:6)
+	str3 := str[0:6]
+	fmt.Println("str1=" , str1 , "str2=" , str2 , "str3=", str3)
+	// 遍历字符串
+	for i := 0 ; i <len(str) ; i++ {
+		ch := str[i]
+		fmt.Printf("%d %v %c\n" , i , ch,  ch)
+	}
+	fmt.Println("range遍历")
+	for i , ch := range str {
+		fmt.Printf("%d %v %c\n" , i , ch,  ch)
+	}
 
 
 
